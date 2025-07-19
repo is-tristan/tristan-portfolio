@@ -1,0 +1,58 @@
+.header {
+    width: 100%;
+}
+
+.headerContainer {
+    display: flex;
+    align-items: center;
+    width: 100%;
+    border-bottom: 1px solid rgba(var(--foregroundRgb), 0.15);
+    height: 5rem;
+
+    @media all {
+        flex-direction: row;
+        justify-content: space-between;
+        padding-top: 0;
+        padding-bottom: 0;
+    }
+}
+
+.logo {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: max-content;
+
+    a {
+        font-size: 1.5rem;
+        font-weight: 700;
+        letter-spacing: -0.08rem;
+        color: var(--primary);
+    }
+}
+
+.navContainer {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    gap: 2rem;
+    width: 100%;
+
+    .nav {
+        display: flex;
+        align-items: center;
+        gap: 2rem;
+
+        a {
+            letter-spacing: -0.08rem;
+
+            &:hover {
+                color: var(--primary);
+            }
+        }
+    }
+
+    .buttons {
+        width: max-content;
+    }
+}
