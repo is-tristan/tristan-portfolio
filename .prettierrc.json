@@ -1,0 +1,22 @@
+{
+  "plugins": ["prettier-plugin-astro"],
+  "overrides": [
+    {
+      "files": "*.astro",
+      "options": {
+        "parser": "astro",
+        "htmlWhitespaceSensitivity": "ignore",
+        "bracketSameLine": false,
+        "printWidth": 60
+      }
+    }
+  ],
+  "tabWidth": 4,
+  "useTabs": true,
+  "semi": true,
+  "singleQuote": false,
+  "trailingComma": "es5",
+  "htmlWhitespaceSensitivity": "ignore",
+  "bracketSameLine": true,
+  "printWidth": 120
+}

@@ -1,19 +1,14 @@
 ---
-import Header from "../components/header.astro";
-import "../styles/global.scss";
-import "../scripts/main.js";
+import Layout from "../layouts/layout.astro";
+import Slider from "../components/splide.astro";
 ---
 
-<html lang="en">
-	<head>
-		<meta charset="utf-8" />
-		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
-		<meta name="viewport" content="width=device-width" />
-		<meta name="generator" content={Astro.generator} />
-		<title>Tristan Wills's Portfolio Website</title>
-	</head>
-	<body>
-		<Header />
-		<slot />
-	</body>
-</html>
+<Layout>
+	<div class="row">
+		<div class="container">
+			<Slider />
+		</div>
+		<!-- .container -->
+	</div>
+	<!-- .row -->
+</Layout>

@@ -1,9 +1,83 @@
-<section class="splide" aria-label="Splide Basic HTML Example">
-    <div class="splide__track">
-        <ul class="splide__list">
-            <li class="splide__slide">Slide 01</li>
-            <li class="splide__slide">Slide 02</li>
-            <li class="splide__slide">Slide 03</li>
-        </ul>
-    </div>
+---
+import { Image } from "astro:assets";
+import tristan from "../../public/images/tristan-wills.webp";
+import externalLinkIcon from "../../public/icons/external-link.svg";
+import gitIcon from "../../public/icons/github.svg";
+import About from "../content/about.md";
+---
+
+<section
+	id="slider"
+	class="splide slider"
+	aria-label="Main content slider"
+>
+	<div class="splide__track">
+		<ul class="splide__list">
+			<li class="splide__slide slide">
+				<div class="slideContainer">
+					<div class="col leftContent">
+						<Image
+							src={tristan}
+							alt="An image of Tristan Wills"
+							width="128"
+							height="128"
+						/>
+						<h2>tristan</h2>
+
+						<div class="tags">
+							<span class="tag primary">
+								Full-stack developer
+							</span>
+						</div>
+						<!-- .tags -->
+
+						<div class="buttons">
+							<a
+								href="https://github.com/is-tristan"
+								class="button primary"
+								target="_blank"
+								rel="noopener noreferrer"
+							>
+								<Image
+									src={externalLinkIcon}
+									alt="External link icon"
+									width="16"
+									height="16"
+								/>
+
+								<span>View GitHub</span>
+							</a>
+							<!-- .primary -->
+
+							<a
+								href="/contact/"
+								class="button primary"
+							>
+								<Image
+									src={gitIcon}
+									alt="GitHub icon"
+									width="16"
+									height="16"
+								/>
+								<span>View GitHub</span>
+							</a>
+							<!-- .secondary -->
+						</div>
+					</div>
+					<div class="col rightContent">
+						<div class="slideHeading">
+							<h3>About Me</h3>
+						</div>
+						<About />
+					</div>
+					<!-- .leftContent -->
+				</div>
+				<!-- .slideContainer -->
+			</li>
+			<!-- .slide -->
+		</ul>
+		<!-- .splide__list -->
+	</div>
+	<!-- .splide__track -->
 </section>
+<!-- #slider -->

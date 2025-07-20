@@ -1,6 +1,6 @@
-import { initSplide } from "./components/splide";
+import InitSplide from "./components/splide";
 
 document.addEventListener("DOMContentLoaded", () => {
-    console.log("Document loaded, initializing Splide...");
-    initSplide();
+	console.log("Document loaded, initializing Splide...");
+	InitSplide();
 });

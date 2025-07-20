@@ -1,0 +1,37 @@
+---
+import "../styles/global.scss";
+import Header from "../components/header.astro";
+---
+
+<html lang="en">
+	<head>
+		<meta charset="utf-8" />
+		<link
+			rel="icon"
+			type="image/svg+xml"
+			href="/favicon.svg"
+		/>
+		<meta
+			name="viewport"
+			content="width=device-width"
+		/>
+		<meta name="generator" content={Astro.generator} />
+		<title>Tristan Wills's Portfolio Website</title>
+	</head>
+	<body>
+		<a
+			href="#content"
+			class="skip-link srOnly"
+			tabindex="1"
+		>
+			Skip to main content
+		</a>
+		<Header />
+		<main id="content" class="content">
+			<slot />
+		</main>
+		<script>
+			import "../scripts/main.js";
+		</script>
+	</body>
+</html>
